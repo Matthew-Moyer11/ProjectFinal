@@ -1,0 +1,370 @@
+/*NAVIGATION AND HEADER*/
+/* Styles for the header */
+header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px 0;
+}
+
+/* Styles for the navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav div,
+nav form {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b37400;
+}
+
+/* Styles for the search form */
+form input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 5px 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #b37400;
+}
+
+
+/*INDEX MAIN CONTENT*/
+.monke {
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically */
+    height: 80vh; /* Sets the height of the div to be the full viewport height */
+    background-image: url('orange.jpg'); /* Ensure the path to your image is correct */
+    background-size: 100%; /* Makes sure the entire image fits within the div */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+}
+
+.greybox {
+    background-color: rgba(128, 128, 128, 0.5); /* Semi-transparent gray box */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px; /* Rounded corners for the box */
+    max-width: 80%;
+}
+
+.center h1 {
+    font-weight: bold; /* Bold text for h1 */
+    font-size: 40px;
+    color:#e7e7e7;
+}
+
+.center {
+    text-align: center; /* Centers the text within the .center div */
+    font-size: 30px;
+    color:#e7e7e7;
+    white-space: normal; /* Ensures that whitespace is handled normally, allowing wrapping */
+    word-wrap: break-word; /* Allows long words to break and wrap onto the next line */
+    max-width: 60%; 
+    margin: auto;
+}
+
+/*BOTTOM NAVGATION FOR HOME PAGE*/
+
+.navnew {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    height: 30vh; 
+}
+
+.navnew div {
+    width: 375px; /* Adjust width for better rectangle shape */
+    height: 200px; /* Adjust height as per requirement */
+    background-color: #f0f0f0; /* Light background color for the rectangles */
+    border-radius: 100px; /* Apply rounded corners to create a rounded rectangle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    transition: background-color 0.3s; 
+
+}
+
+.navnew div:hover {
+    background-color:#b37400; /* Change background color to orange on hover */
+}
+
+.navnew div h1 {
+    margin: 0;
+}
+
+.navnew div h1 a {
+    font-weight: bold; 
+    color: black;
+    text-decoration: none; 
+    display: block; /* Make the link fill the container for easier clicking */
+}
+
+/*FOOTER STYLE*/
+footer {
+    background-color: #f8f8f8;
+    border-top: 1px solid #e7e7e7;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer p {
+    margin: 0 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+footer img {
+    margin-left: 10px;
+}
+
+/*WHO WE ARE SLIDESHOW*/
+
+
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the flex items (the image and the h1 tag) horizontally */
+}
+
+.image-container h1 {
+    margin-bottom: 20px; /* Adds some space between the title and the image */
+}
+
+.image-container img {
+    width: 500px; /* Width of the image */
+    height: 400px; /* Height of the image */
+    border-radius: 15px; /* Rounded corners of the image */
+    object-fit: cover; /* Ensures the image covers the area without losing its aspect ratio */
+}
+.mySlides {
+    display: none;
+    animation: fadein 2s; /* Adds a fade-in effect */
+}
+
+
+/* Fades in the slides */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /*ANIMAL CATALOG*/
+
+/* IMAGES */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex; /* Aligns children divs horizontally */
+    justify-content: center; /* Centers the children divs horizontally */
+    align-items: center; /* Centers the children divs vertically */
+}
+
+.image-link {
+    flex: 1; /* Allows each link to grow and fill the space evenly */
+    margin: 10px; /* Adds space between the images */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Adds depth with a subtle shadow */
+    overflow: hidden; /* Prevents overflow of child elements */
+    border-radius: 10px; /* Rounds the corners for a softer look */
+}
+
+.image-link:hover .image {
+    transform: scale(1.1); /* Scales the image up on hover for an interactive effect */
+}
+
+.image {
+    width: 100%;
+    height: 400px; /* Adjust based on your design */
+    background-size: cover;
+    background-position: center;
+}
+
+#image1 {
+    background-image: url('SunBear.png');
+}
+
+#image2 {
+    background-image: url('Jag.png');
+}
+
+#image3 {
+    background-image: url('PBEAR.png');
+}
+
+.big2 {
+    text-align: center;
+    font-size: 2em; /* Makes the font size larger for emphasis */
+    color: #333; /* Dark gray for better readability */
+    padding: 20px 0; /* Adds vertical padding */
+    max-width: 80%; /* Better control over width for large screens */
+    margin: 20px auto 40px; /* Margin for top, horizontal auto-centering, and larger bottom margin */
+    line-height: 1.3; 
+}
+/*CONTACT US FORM*/
+
+.contact-form-container {
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Centers the form in the page */
+    padding: 20px;
+    background-color: #ffffff; /* White background for the form area */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+h1 {
+    text-align: center; 
+}
+
+.form-row {
+    margin-bottom: 15px; 
+}
+
+label {
+    display: block; 
+
+    margin-bottom: 5px; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width to fill the form container */
+    padding: 8px; /* Padding inside the input and textarea fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded borders for the inputs and textarea */
+}
+
+textarea {
+    resize: none; /* Disables resizing of the textarea */
+}
+
+input[type="submit"] {
+    background-color: #ccc; /* Grey background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Makes the submit button full width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for the button for depth */
+}
+
+input[type="submit"]:hover {
+    background-color: #b37400; /* Slightly orange when hovered */
+}
+
+.container {
+    padding: 20px; /* Adds padding around the elements inside the container */
+    width: 100%; /* Ensures the container takes full width of the viewport */
+    margin-top: 0; /* Removes any top margin */
+    padding-top: 0; /* Removes any top padding */
+
+}
+
+.column, .image-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the columns and image container */
+    margin-bottom: 20px; /* Adds space between the columns */
+    text-align: center;
+    line-height: 2;
+    height: 500px;
+    width: 500px;
+    padding: 20px
+}
+
+.aligned-heading {
+    text-align: center; /* Centers all headings */
+}
+
+.support-link {
+    width: 100%; /* Full width */
+    display: block; /* Block display to take the full line */
+    padding: 20px 0; /* Padding for button size */
+    background-color: #ccc; /* Background color */
+    color: black; /* Text color */
+    font-size: 20px; /* Font size */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center the text inside the button */
+}
+
+.support-link:hover {
+    background-color: #b37400; /* Darker shade when hovered */
+}
+
+/*thank you form css*/
+
+
+.thank-you-container {
+    text-align: center; 
+    background-color: #ffffff; 
+    padding: 40px; /* Adds padding around the text */
+    border-radius: 8px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px; /* Limits the width of the container */
+    width: 100%; /* Uses the maximum width up to 400px */
+}
+
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ccc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover {
+    background-color: #b37400;
+}
